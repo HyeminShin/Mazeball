@@ -37,7 +37,7 @@ class _StartScreenState extends State<StartScreen> {
                       letterSpacing: 6,
                       color: Colors.white),
                 ),
-                RaisedButton(
+                ElevatedButton(
                     child: Text("Play"),
                     onPressed: () async {
                       game.pauseGame = true; //Stop anything in our background
@@ -48,7 +48,7 @@ class _StartScreenState extends State<StartScreen> {
                       game.pauseGame =
                           false; //Restart it when the screen finishes
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text("Options"),
                     onPressed: () async {
                       game.pauseGame = true; //Stop anything in our background
@@ -58,7 +58,7 @@ class _StartScreenState extends State<StartScreen> {
                               builder: (context) => OptionScreen()));
                       game.pauseGame = false;
                     }),
-                RaisedButton(
+                ElevatedButton(
                     child: Text("About"),
                     onPressed: () {
                       showDialog(

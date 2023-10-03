@@ -146,7 +146,7 @@ class _OptionScreenState extends State<OptionScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    RaisedButton(
+                    ElevatedButton(
                       child: Text("Save"),
                       onPressed: () async {
                         var prefs = await SharedPreferences.getInstance();
@@ -172,7 +172,7 @@ class _OptionScreenState extends State<OptionScreen> {
       controller: controller,
       keyboardType: TextInputType.number,
       inputFormatters: <TextInputFormatter>[
-        WhitelistingTextInputFormatter.digitsOnly
+        FilteringTextInputFormatter.digitsOnly
       ],
       style: TextStyle(
         color: Colors.white,
